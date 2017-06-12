@@ -1,0 +1,130 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University/School Laboratory Report
+% LaTeX Template
+% Version 3.1 (25/3/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Linux and Unix Users Group at Virginia Tech Wiki 
+% (https://vtluug.org/wiki/Example_LaTeX_chem_lab_report)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper]{article}
+
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{natbib} % Required to change bibliography style to APA
+\usepackage{amsmath} % Required for some math elements 
+\usepackage{comment}
+\usepackage{url}
+\usepackage[normalem]{ulem}
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Machine Learning with Text\\ Leitfaden f\"{u}r die Projektarbeit} % Title
+
+\author{Nils Witt} % Author name
+
+\date{\today} % Date for the report
+
+\begin{document}
+
+\maketitle % Insert the title, author and date
+
+\section{Einleitung}
+Die Pr\"{u}fungsleistung f\"{u}r das Modul "Machine Learning with Text" wird in Form eines Projektes erbracht. Dazu erh\"{a}lt jeder Student eine eigene Forschungsaufgabe. Diese besteht aus diesem Leitfaden, einem Datensatz und einer Aufgabenstellung. Dieser Leitfaden erkl\"{a}rt die Notenvergabe, beschreibt die zu erarbeitenden Dokumente und skizziert den Ablauf des Projektes.  
+
+\section{Projektablauf}
+In diesem Kapitel wird der grobe Projektablauf stichwortartig skizziert. Die hier beschriebene Vorgehensweise dient als Orientierungshilfe. Sie sollte also nicht zwangsweise befolgt werden. Wenn es gute Gr\"{u}nde f\"{u}r einen anderen Projektablauf gibt, sollte dieser verfolgt werden:\\
+\begin{enumerate}
+\item Ausgabe der Forschungsaufgabe
+\item Literaturrecherche zur gestellten Aufgabe. Dabei sollten u.a. Antworten zu folgende Fragen gesucht werden: Habe ich das genaue Ziel des Projektes verstanden? Ist mein Datensatz geeignet f\"{u}r diese Art von Aufgabe? Wie haben andere diese Aufgabe bew\"{a}ltigt? Was ist die einfachste L\"{o}sung zu meiner Aufgabe? etc..
+\item Sichtung des Datensatzes. In welchem Format liegen die Daten vor? Wie kann ich die Daten lesen? Welche Vorverarbeitungsschritte sollte ich durchf\"{u}hren (vielleicht gibt es auff\"{a}llige Fehlermuster, die leicht beseitigt sind)? Gibt es M\"{o}glichkeiten weitere Daten zu sammeln, um bessere Ergebnisse zu erhalten.
+\item Entwickeln einer ersten einfachen Arbeitshypothese. Die k\"{o}nnte im Falle einer Sentiment Analysis z.B. lauten:\\
+\begin{quote}
+Es gibt W\"{o}rter, die haupts\"{a}chlich verwendet werden, um negative Stimmungen auszudr\"{u}cken (z.B. miserable, langweilig, schlecht) und W\"{o}rter, die verwendet werden, um positive Stimmungen auszudr\"{u}cken (lecker, schnell, gem\"{u}tlich). Au\ss erdem gibt es noch neutrale W\"{orter} (z.B. Telefon, Wetter, Baum). Wie kann ich die jeweiligen W\"{o}rter identifizieren? Nachdem ich das geschafft habe, kann ich die positiv assoziierten und die negativ assoziierten W\"{o}rter z\"{a}hlen. Abh\"{a}ngig davon, welche der Summen gr\"{o}\ss er ist, habe ich entweder ein vorwiegend positives Statement oder ein vorwiegend negatives Statement in dem Text.
+\end{quote}
+\item Evaluieren der Hypothese: Wie kann \"{u}berpr\"{u}ft werden, ob die Ar\-beit\-shypo\-these stimmt? Im vorherigen Beispiel k\"{o}nnte z.B. ein Datensatz gesucht und gefunden werden, der neben den Texten auch von Menschen generierte Labels (Text x hat eine positive Stimmung, Text y hat eine negative Stimmung) enth\"{a}lt. Dieser Datensatz kann verwendet werden, um zu bestimmen, wie gut die These h\"{a}lt.
+\item Implementieren der erdachten Verfahrens. Wie repr\"{a}sentieren ich den Text? Gibt es eine geeignet Visualisierung, damit ich Einblicke in meine Daten erhalte?
+\item Sollte die Hypothese nicht best\"{a}tigt worden sein, muss eine neue, angepasste Hypothese formuliert und gepr\"{u}ft werden.
+\item Wird die These best\"{a}tigt, sollten M\"{o}glichkeiten erwogen werden die These zu verfeinern. Im Beispiel k\"{o}nnten W\"{o}rter z.B: eine Gewichtung erhalten: "Das Essen hat gut geschmeckt" erh\"{a}lt dabei ein geringeres positives Gewicht als "Das Essen hat sehr gut geschmeckt".
+\item Der Einfluss der Machine Learning Maschinerie muss \"{u}berpr\"{u}ft werden. Was passiert wenn ich statt einer simplen Bag-of Words-Repr\"{a}sentation tf-idf verwende? Gibt es f\"{u}r meine derzeitige Aufgabe einen besseren Classifier als den, den ich derzeit verwende?
+\item Das Verfeinern/Anpassen der Hypothese und die \"{A}nderungen an der Maschine Learning Maschinerie k\"{o}nnen nat\"{u}rlich beliebig oft wiederholt werden. Vermutlich erkennt man nach einigen Iterationen Muster in seinen Versuchen. Diese sollten genutzt werden um Schlussfolgerungen zu ziehen (z.B: Verfahren x ist immer besser als Verfahren y. Diese liegt daran, dass...). 
+\end{enumerate}
+Noch einige Hinweise:
+\begin{itemize}
+\item Zu jedem dieser Punkte sollten stets Notizen gemacht werden und ggf. Code geschrieben werden. Jupyter Notebooks erlauben es Notizen und Code nah beinhaltender zu notieren. Das sollte genutzt werden. So entsteht auf nat\"{u}rliche Weise eine "Labortagebuch", welches schon weitestgehend dem Projektbericht, welcher am Ende abzugeben ist, entspricht. So beginnt man nicht den Projektbericht vor einem wei\ss en Blatt Papier (was sehr demotivierend ist).
+\item M\"{o}glichkeiten zum Visualisieren von Daten sollten unbedingt genutzt werden! Oftmals sind Visualisierungen die Grundlage f\"{u}r neue Ideen. Menschen denken sehr visuell, daher formen Visualisierungen das menschliche Denken sehr.
+\item Wahrscheinlich werden einige praktische Probleme auftreten: z.B: brauchen einige Machine Learning Modelle sehr viel Arbeitsspeicher oder Rechenzeit. Dann muss entweder die Gr\"{o}\ss e des Datensatzes reduziert werden oder es m\"{u}ssen einfachere Modelle verwendet werden. Sollten derartige Entscheidungen gef\"{a}llt werden m\"{u}ssen, sollte diese unbedingt nie\-der\-ge\-sch\-rie\-ben werden.
+\item Es gibt keine Beschr\"{a}nkung der Hilfsmittel. Alle Forschungsaufgaben basieren auf altbekannten Forschungsfragen, die bereits umf\"{a}nglich studiert wurden. Daher gibt es reichlich Literatur dazu zu lesen. Diese darf und soll verwendet werden. Hierbei ist auf korrektes Zitieren zu achten. Auch das Reproduzieren anderer Arbeiten ist gestattet, das Kopieren von anderen Arbeiten ist jedoch nicht gestattet!  
+\end{itemize} 
+
+\section{Notenvergabe}
+Die Forschungsaufgabe dient den Studenten als Ausgangspunkt zur selbst\-st\"{a}n\-digen Durchf\"{u}hrung eines Forschungsprojektes. Das hei\ss t insbesondere, dass die For\-schung\-sauf\-gabe die Studenten nicht in ihrer Neugier und Forschungslust einschr\"{a}nkt. Ergebnisse, die \"{u}ber die urspr\"{u}ngliche Aufgabe hinausgehen werden \"{u}beraus positiv bewertet, diese werden jedoch keineswegs erwartet. Dabei sollte jedoch das vorgegebene Forschungsziel nicht vernachl\"{a}\ss igt werden!\\
+Ob das vorgegebene Forschungsziel erreicht wurde, ist nicht relevant f\"{u}r die Bewertung der Arbeit. Entscheidend ist, dass gezeigt wird, dass dem Forschungsziel akribisch nachgegangen wurde und das verstanden wurde, warum es das Ziel erreicht oder nicht erreicht wurde. Dabei sollten im Falle eines ausbleibenden Erfolgs Ideen f\"{u}r Alternative Forschungsfragen erarbeitet und ausprobiert werden. Die Minimalanforderungen, um das Modul zu bestehen sehen wie folgt aus:
+\begin{itemize}
+\item Der Student hat im Projektbericht und w\"{a}hrend der Pr\"{a}sentation gezeigt, dass er die gestellte Aufgabe verstanden hat.
+\item Der Student hat das Forschungsziel erreicht (oder nicht) und \uline{versteht} warum er es erreicht hat (oder nicht).
+\item Die Arbeit zeigt, dass der grundlegende Ablauf eines Machine Learning Projektes verstanden wurde (Textvorverarbeitung, Textrepr\"{a}sentationen, Featureauswahl, Verwendung von supervised und unsupervised Modellen, Visualisierungen, Modelvalidierung etc.).
+\item Der Projektbericht ist strukturiert (Text und Code) und gibt die Arbeitsweise geeignet wieder.
+\item Der Code im Projektbericht ist ausf\"{u}hrbar (wirft keine bzw. wenige Exceptions).
+\item Die Pr\"{a}sentation ist strukturiert und verst\"{a}ndlich.
+\item W\"{a}hrend der Pr\"{a}sentation kann der Student seine Arbeit überzeugend erl\"{a}utern.
+\end{itemize}
+
+Die beste Note wird vergeben, wenn zus\"{a}tzlich zu den Minimalanforderungen noch ein Teil der folgenden Anforderungen erf\"{u}llt wird:
+\begin{itemize}
+\item Der Student hat Verfahren, Bibliotheken oder Methoden in geeigneter Weise verwendet, die nicht Teil der Vorlesung waren und hat deren Funktionsweise in seinem Projektbericht korrekt beschrieben. Z.B: ROP Curves, Standard Errors und Confidence Intervals, Crossvalidation, Precision and Recall, F1-Measure, Neuronale Netzwerke, Scikit-Learn's \texttt{Pipeline}-Klasse, automatische Hyperparameter Optimierung, Hierarchisches Clustering, Bo\-keh, Seaborn, etc..
+\item Der geschriebene Code ist sehr leserlich und effizient.
+\item Komplexe Codestrukturen sind kommentiert, sodass der Zweck des Codes leicht verst\"{a}ndlich wird.
+\item Es werden Visualisierungen pr\"{a}sentiert, die einen komplexen Sachverhalt leicht verst\"{a}dlich machen. Dazu sind insbesondere interaktive Vi\-su\-a\-li\-sie\-rungen geeignet.
+\item Die Pr\"{a}sentation ist sehr klar strukturiert, unterhaltsam, vermittelt die wichtigsten Erkenntnisse der Arbeit, verzichtet auf unn\"{o}tige Details und ist auch f\"{u}r nicht-Experten verst\"{a}dlich.
+\item Texte und Codes sind so kurz wie m\"{o}glich angesichts der enthaltenen Informationen: \begin{quote}
+"Perfection is finally attained not when there is no longer anything to add but when there is no longer anything to take away." - Antoine de Saint-Exupery
+\end{quote}
+\item Die zur \"{U}berpr\"{u}fung der Hypothesen verwendeten Verfahren werden korrekt verwendet.
+\item Andere, hier nicht explizit genannte Eigenschaften der Arbeit, die diese als ausgew\"{o}nlich kennzeichnen.
+\end{itemize}
+
+\section{Abgaberelevante Dokumente}
+Zum Nachweis der geleiteten Arbeit wird ein Projektbericht erstellt. Dieser soll sowohl ausf\"{u}hrbaren Code als auch schriftliche Erl\"{a}uterungen enthalten. Idealerweise wird ein Jupyter Notebook verwendet. Der Projektbericht f\"{u}hrt durch das Projekt, enth\"{a}lt Arbeitshypothesen und deren Nachweise bzw. Widerlegungen (in Form von ausf\"{u}hrbarem Code). Es wird sowohl \"{u}ber Misserfolge als auch \"{u}ber Erfolge berichtet.\\
+Weiterhin wird eine 15 min\"{u}tige Pr\"{a}sentation erarbeitet, die die wichtigsten Ergebnisse der Arbeit vorstellt. Dabei soll davon ausgegangen werden, dass das Publikum den Projektbericht nicht kennt. Ziel der Pr\"{a}sentation soll es sein, die eigene Arbeit so interessant darzustellen, dass das Publikum dazu angeregt wird, den Projektbericht zu lesen. Die Pr\"{a}sentation sollte mindestens folgende Punkte beinhalten:
+\begin{itemize}
+\item Erl\"{a}uterung des Projektziels
+\item Vorstellung des Datensatzes
+\item Arbeitshypothesen
+\item Idee zur \"{u}berpr\"{u}fung der Arbeitshypothesen
+\item Aufgetretene Probleme und Umgang mit den Problemen
+\item Endg\"{u}ltige L\"{o}sung
+\item Zusammenfassung
+\end{itemize}
+
+\section{R\"{u}ckfragen}
+Es liegt in der Natur von Foschungsarbeiten das es Situationen gibt, in denen man ein Problem nicht l\"{o}sen kann (oder glaubt es nicht l\"{o}sen zu k\"{o}nnen). In solchen Situationen sollte Hilfe von au\ss erhalb gesucht werden. Dabei sollte folgende Reihenfolge eingehalten werden:
+\begin{enumerate}
+\item \textbf{Internet:} So ziemlich jedes Problem, das im Rahmen der Forschungsprojekte auftreten wird, hat schon irgendjemand gehabt und dar\"{u}ber im Internet geschrieben. Diese Beitrag sollte gesucht werden! Suchmaschinen sind dabei nat\"{u}rlich das wichtigste Werkzeug. Aber auch Communities wie Stackoverflow, Google Groups und Reddit k\"{o}nnen sehr hilfreich sein. Sollte das Problem tats\"{a}chlich neuartig sein (was sehr unwahrscheinlich ist), kann die Frage auch direkt an eine der gerade erw\"{a}hnten Communities gerichtet werden.  
+\item \textbf{Kommilitonen:} Mitstudierende werden wahrscheinlich \"{a}hnliche Probleme haben. Sicher dar\"{u}ber auszutauschen kann sehr hilfreich sein.
+\item \textbf{Dozent:} Sollten die ersten beiden Schritte zu keiner L\"{o}sung f\"{u}hren, kann nat\"{u}rlich der Dozent gefragt werden. Dazu sollte eine E-Mail an \url{nils@tmfw.de} geschickt werden.
+\end{enumerate}
+In jedem Falle gilt folgendes: Wenn jemandem (einer Community, einem Kommilitonen oder dem Dozenten) ein Problem angetragen wird, sind gewisse Regeln zu beachten. Diese sind am bei Stackoverflow zusammengefasst:\\ \\
+\hspace*{12mm}\url{https://stackoverflow.com/help/how-to-ask} \\ \\
+Werden diese Regeln eingehalten, steigt die Chance eine hilfreiche Antwort zu erhalten. Gelegentlich st\"{o}\ss t man beim ausformulieren der Frage und der damit verbundenen Recherche auf die L\"{o}sung. Weiterhin gilt, dass rechtzeitiges Fragen notwendig ist. Grundlegende Fragen sollten nicht zwei Tage vor Abgabe der Arbeit gestellt werden!\\
+Explit ausgeschlo\ss en von diesem Verfahren sind formale Fragen oder Fragen die zur Klarstellung der Aufgabenstellung dienen.
+\end{document}
