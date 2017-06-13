@@ -96,7 +96,7 @@ Die beste Note wird vergeben, wenn zus\"{a}tzlich zu den Minimalanforderungen no
 \item Komplexe Codestrukturen sind kommentiert, sodass der Zweck des Codes leicht verst\"{a}ndlich wird.
 \item Es werden Visualisierungen pr\"{a}sentiert, die einen komplexen Sachverhalt leicht verst\"{a}dlich machen. Dazu sind insbesondere interaktive Vi\-su\-a\-li\-sie\-rungen geeignet.
 \item Die Pr\"{a}sentation ist sehr klar strukturiert, unterhaltsam, vermittelt die wichtigsten Erkenntnisse der Arbeit, verzichtet auf unn\"{o}tige Details und ist auch f\"{u}r nicht-Experten verst\"{a}dlich.
-\item Texte und Codes sind so kurz wie m\"{o}glich angesichts der enthaltenen Informationen: \begin{quote}
+\item Texte und Codes sind so kurz wie m\"{o}glich, angesichts der enthaltenen Informationen: \begin{quote}
 "Perfection is finally attained not when there is no longer anything to add but when there is no longer anything to take away." - Antoine de Saint-Exupery
 \end{quote}
 \item Die zur \"{U}berpr\"{u}fung der Hypothesen verwendeten Verfahren werden korrekt verwendet.
@@ -104,23 +104,23 @@ Die beste Note wird vergeben, wenn zus\"{a}tzlich zu den Minimalanforderungen no
 \end{itemize}
 
 \section{Abgaberelevante Dokumente}
-Zum Nachweis der geleiteten Arbeit wird ein Projektbericht erstellt. Dieser soll sowohl ausf\"{u}hrbaren Code als auch schriftliche Erl\"{a}uterungen enthalten. Idealerweise wird ein Jupyter Notebook verwendet. Der Projektbericht f\"{u}hrt durch das Projekt, enth\"{a}lt Arbeitshypothesen und deren Nachweise bzw. Widerlegungen (in Form von ausf\"{u}hrbarem Code). Es wird sowohl \"{u}ber Misserfolge als auch \"{u}ber Erfolge berichtet.\\
-Weiterhin wird eine 15 min\"{u}tige Pr\"{a}sentation erarbeitet, die die wichtigsten Ergebnisse der Arbeit vorstellt. Dabei soll davon ausgegangen werden, dass das Publikum den Projektbericht nicht kennt. Ziel der Pr\"{a}sentation soll es sein, die eigene Arbeit so interessant darzustellen, dass das Publikum dazu angeregt wird, den Projektbericht zu lesen. Die Pr\"{a}sentation sollte mindestens folgende Punkte beinhalten:
+Zum Nachweis der geleisteten Arbeit wird ein Projektbericht erstellt. Dieser soll sowohl ausf\"{u}hrbaren Code als auch schriftliche Erl\"{a}uterungen enthalten. Idealerweise wird ein Jupyter Notebook verwendet. Der Projektbericht umfasst das gesamte Projekt und nicht blo\ss{ } Teilaspekte. Der Projektbericht f\"{u}hrt durch das Projekt, enth\"{a}lt Arbeitshypothesen und deren Nachweise bzw. Widerlegungen (in Form von ausf\"{u}hrbarem Code). Es wird sowohl \"{u}ber Misserfolge als auch \"{u}ber Erfolge berichtet.\\
+Weiterhin wird eine 15 min\"{u}tige Pr\"{a}sentation erarbeitet, die die wichtigsten Ergebnisse der Arbeit vorstellt, gefolgt von einer 15 minütigen Diskussion \"{u}ber den Inhalt der Präsentation. Dabei soll davon ausgegangen werden, dass das Publikum den Projektbericht nicht kennt. Ziel der Pr\"{a}sentation soll es sein, die eigene Arbeit so interessant darzustellen, dass das Publikum dazu angeregt wird, den Projektbericht zu lesen. Die Pr\"{a}sentation sollte mindestens folgende Punkte beinhalten:
 \begin{itemize}
 \item Erl\"{a}uterung des Projektziels
 \item Vorstellung des Datensatzes
 \item Arbeitshypothesen
-\item Idee zur \"{u}berpr\"{u}fung der Arbeitshypothesen
+\item Idee zur \"{U}berpr\"{u}fung der Arbeitshypothesen
 \item Aufgetretene Probleme und Umgang mit den Problemen
 \item Endg\"{u}ltige L\"{o}sung
 \item Zusammenfassung
 \end{itemize}
 
 \section{R\"{u}ckfragen}
-Es liegt in der Natur von Foschungsarbeiten das es Situationen gibt, in denen man ein Problem nicht l\"{o}sen kann (oder glaubt es nicht l\"{o}sen zu k\"{o}nnen). In solchen Situationen sollte Hilfe von au\ss erhalb gesucht werden. Dabei sollte folgende Reihenfolge eingehalten werden:
+Es liegt in der Natur von Foschungsarbeiten das es Situationen gibt, in denen man ein Problem nicht l\"{o}sen kann (oder glaubt es nicht l\"{o}sen zu k\"{o}nnen). In solchen Situationen sollte Hilfe von au\ss erhalb gesucht werden. Dabei soll folgende Reihenfolge eingehalten werden:
 \begin{enumerate}
-\item \textbf{Internet:} So ziemlich jedes Problem, das im Rahmen der Forschungsprojekte auftreten wird, hat schon irgendjemand gehabt und dar\"{u}ber im Internet geschrieben. Diese Beitrag sollte gesucht werden! Suchmaschinen sind dabei nat\"{u}rlich das wichtigste Werkzeug. Aber auch Communities wie Stackoverflow, Google Groups und Reddit k\"{o}nnen sehr hilfreich sein. Sollte das Problem tats\"{a}chlich neuartig sein (was sehr unwahrscheinlich ist), kann die Frage auch direkt an eine der gerade erw\"{a}hnten Communities gerichtet werden.  
-\item \textbf{Kommilitonen:} Mitstudierende werden wahrscheinlich \"{a}hnliche Probleme haben. Sicher dar\"{u}ber auszutauschen kann sehr hilfreich sein.
+\item \textbf{Internet:} So ziemlich jedes Problem, das im Rahmen der Forschungsprojekte auftreten wird, hat schon irgendjemand gehabt und dar\"{u}ber im Internet geschrieben. Dieser Beitrag soll gesucht werden! Suchmaschinen sind dabei nat\"{u}rlich das wichtigste Werkzeug. Aber auch Communities wie Stackoverflow, Google Groups und Reddit k\"{o}nnen sehr hilfreich sein. Sollte das Problem tats\"{a}chlich neuartig sein (was sehr unwahrscheinlich ist), kann die Frage auch direkt an eine der gerade erw\"{a}hnten Communities gerichtet werden.  
+\item \textbf{Kommilitonen:} Mitstudierende werden wahrscheinlich \"{a}hnliche Probleme haben. Sich dar\"{u}ber auszutauschen kann sehr hilfreich sein.
 \item \textbf{Dozent:} Sollten die ersten beiden Schritte zu keiner L\"{o}sung f\"{u}hren, kann nat\"{u}rlich der Dozent gefragt werden. Dazu sollte eine E-Mail an \url{nils@tmfw.de} geschickt werden.
 \end{enumerate}
 In jedem Falle gilt folgendes: Wenn jemandem (einer Community, einem Kommilitonen oder dem Dozenten) ein Problem angetragen wird, sind gewisse Regeln zu beachten. Diese sind am bei Stackoverflow zusammengefasst:\\ \\
