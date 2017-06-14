@@ -86,7 +86,7 @@ Ob das vorgegebene Forschungsziel erreicht wurde, ist nicht relevant f\"{u}r die
 \item Der Projektbericht ist strukturiert (Text und Code) und gibt die Arbeitsweise geeignet wieder.
 \item Der Code im Projektbericht ist ausf\"{u}hrbar (wirft keine bzw. wenige Exceptions).
 \item Die Pr\"{a}sentation ist strukturiert und verst\"{a}ndlich.
-\item W\"{a}hrend der Pr\"{a}sentation kann der Student seine Arbeit überzeugend erl\"{a}utern.
+\item W\"{a}hrend der Pr\"{a}sentation kann der Student seine Arbeit \"{u}berzeugend erl\"{a}utern.
 \end{itemize}
 
 Die beste Note wird vergeben, wenn zus\"{a}tzlich zu den Minimalanforderungen noch ein Teil der folgenden Anforderungen erf\"{u}llt wird:
@@ -105,7 +105,7 @@ Die beste Note wird vergeben, wenn zus\"{a}tzlich zu den Minimalanforderungen no
 
 \section{Abgaberelevante Dokumente}
 Zum Nachweis der geleisteten Arbeit wird ein Projektbericht erstellt. Dieser soll sowohl ausf\"{u}hrbaren Code als auch schriftliche Erl\"{a}uterungen enthalten. Idealerweise wird ein Jupyter Notebook verwendet. Der Projektbericht umfasst das gesamte Projekt und nicht blo\ss{ } Teilaspekte. Der Projektbericht f\"{u}hrt durch das Projekt, enth\"{a}lt Arbeitshypothesen und deren Nachweise bzw. Widerlegungen (in Form von ausf\"{u}hrbarem Code). Es wird sowohl \"{u}ber Misserfolge als auch \"{u}ber Erfolge berichtet.\\
-Weiterhin wird eine 15 min\"{u}tige Pr\"{a}sentation erarbeitet, die die wichtigsten Ergebnisse der Arbeit vorstellt, gefolgt von einer 15 minütigen Diskussion \"{u}ber den Inhalt der Präsentation. Dabei soll davon ausgegangen werden, dass das Publikum den Projektbericht nicht kennt. Ziel der Pr\"{a}sentation soll es sein, die eigene Arbeit so interessant darzustellen, dass das Publikum dazu angeregt wird, den Projektbericht zu lesen. Die Pr\"{a}sentation sollte mindestens folgende Punkte beinhalten:
+Weiterhin wird eine 15 min\"{u}tige Pr\"{a}sentation erarbeitet, die die wichtigsten Ergebnisse der Arbeit vorstellt, gefolgt von einer 15 min\"{u}tigen Diskussion \"{u}ber den Inhalt der Pr\"{a}sentation. Dabei soll davon ausgegangen werden, dass das Publikum den Projektbericht nicht kennt. Ziel der Pr\"{a}sentation soll es sein, die eigene Arbeit so interessant darzustellen, dass das Publikum dazu angeregt wird, den Projektbericht zu lesen. Die Pr\"{a}sentation sollte mindestens folgende Punkte beinhalten:
 \begin{itemize}
 \item Erl\"{a}uterung des Projektziels
 \item Vorstellung des Datensatzes
